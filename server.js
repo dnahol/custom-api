@@ -4,7 +4,9 @@
 //you're actually requiring the index.js
 //in the dir named math
 
-const PORT = 8000;
+//const PORT = 8000;
+
+const PORT = process.env.PORT || 8000;
 
 var http = require('http');
 var fs = require('fs');
@@ -29,6 +31,7 @@ var server = http.createServer( (req, res) => {
       break;
     case 'pokemon':
       var pokemon = require('./pokemon')(params, res);
+      //console.log( pokemon );
       res.end(  pokemon  );
       break;
     case 'magicEight':

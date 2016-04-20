@@ -76,7 +76,7 @@ function getPokemon(email) {
   $.get(`/pokemon/${email}`)
   .done(function(data) {
 
-    $pokemon = $pokemon.text(`Pokemon: ${data})`);
+    $pokemon = $pokemon.text(`Pokemon: ${data}`);
 
   })
   .fail(function(error) {
