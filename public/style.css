@@ -1,0 +1,9 @@
+body {
+  background-color: darkred;
+  color: white;
+  font-family: monospace;
+}
+
+span {
+  margin: 10px;
+}
