@@ -27,7 +27,17 @@ var server = http.createServer( (req, res) => {
       var imageUrl = require('./image')(params, res);
       res.end(  imageUrl  );
       break;
-    default: //see if they want a file
+    case 'pokemon':
+      var pokemon = require('./pokemon')(params, res);
+      res.end(  pokemon  );
+      break;
+    case 'magicEight':
+      var magicEight = require('./magicEight')(params, res);
+      res.end(  magicEight  );
+      break;
+
+    default:
+    //see if they want a file
       //console.log('resource: ', resource);
 
       fs.readFile(`./public/${resource}` , (err, data) => {

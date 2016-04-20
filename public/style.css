@@ -1,9 +1,25 @@
+.card {
+  border: 1px solid #FFF;
+  padding: 5px;
+  margin: 10px;
+  display: inline-block;
+  min-width: 200px;
+}
+
 body {
   background-color: darkred;
   color: white;
   font-family: monospace;
+  font-size: 100%
 }
 
 span {
   margin: 10px;
+}
+a{
+  color: white;
+  transition: color .5s ease-in-out;
+}
+a:hover{
+  color: rgb(154, 218, 203);
 }
